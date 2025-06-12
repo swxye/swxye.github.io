@@ -1,0 +1,76 @@
+* {
+  font-family: "JetBrains Mono";
+  line-height: 1.5;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+ul li::before {
+  content: "-";
+  padding-right: 1ch;
+}
+
+.flexbox_standard {
+  display: flex;
+}
+
+.flexbox_space_between {
+  justify-content: space-between;
+}
+
+.flexbox_gaps {
+  gap: 20px;
+}
+
+.standard_box {
+  width: fit-content;
+  height: fit-content;
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+#navigation_bar {
+  padding: 10px 20px;
+}
+
+body {
+  background-color: rgb(30, 30, 46);
+}
+
+a {
+  text-decoration: none;
+}
+a:link {
+  color: rgb(137, 180, 250);
+}
+a:visited {
+  color: rgb(203, 166, 247);
+}
+a:active {
+  color: rgb(243, 139, 168);
+}
+a:hover {
+  color: rgb(166, 227, 161);
+}
+
+.standard_box {
+  color: rgb(205, 214, 244);
+  background-color: rgb(30, 30, 46);
+  border: rgb(180, 190, 254) solid 2px;
+  border-radius: 20px;
+}
+.standard_box:hover {
+  color: rgb(30, 30, 46);
+  background-color: rgb(205, 214, 244);
+  border: transparent solid 2px;
+}
+
+#navigation_bar {
+  color: rgb(205, 214, 244);
+  background-color: rgb(24, 24, 37);
+}
+
+/*# sourceMappingURL=homepage.css.map */

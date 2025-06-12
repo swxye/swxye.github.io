@@ -1,0 +1,22 @@
+.flexbox_standard {
+    display: flex;
+}
+
+.flexbox_space_between {
+    justify-content: space-between;
+}
+
+.flexbox_gaps {
+    gap: 20px;
+}
+
+.standard_box {
+    width: fit-content;
+    height: fit-content;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+#navigation_bar {
+    padding: 10px 20px;
+}

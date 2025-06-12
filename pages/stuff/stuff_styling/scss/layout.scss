@@ -1,0 +1,31 @@
+.flexbox_standard {
+    display: flex;
+}
+
+.flexbox_space_between {
+    justify-content: space-between;
+}
+
+.flexbox_gaps {
+    gap: 20px;
+}
+
+.grid_standard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.space_filling_box {
+    width: 1fr;
+    height: fit-content;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+#navigation_bar {
+    padding: 10px 20px;
+}
+
+#page_content-stuff {
+    padding: 0px 100px;
+}

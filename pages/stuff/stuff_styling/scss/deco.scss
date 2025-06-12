@@ -1,0 +1,51 @@
+$mauve: rgb(203, 166, 247);
+$red: rgb(243, 139, 168);
+$green: rgb(166, 227, 161);
+$blue: rgb(137, 180, 250);
+$lavender: rgb(180, 190, 254);
+
+$text: rgb(205, 214, 244);
+$base: rgb(30, 30, 46);
+$mantle: rgb(24, 24, 37);
+
+body {
+    background-color: $base;
+}
+
+a {
+    text-decoration: none;
+    
+    &:link {
+        color: $blue;
+    }
+
+    &:visited {
+        color: $mauve;
+    }
+
+    &:active {
+        color: $red;
+    }
+
+    &:hover {
+        color: $green;
+    }
+}
+
+.space_filling_box {
+    color: $text;
+    background-color: $base;
+    border: $lavender solid 2px;
+    border-radius: 20px;
+
+    &:hover {
+        color: $base;
+        background-color: $text;
+        border: transparent solid 2px;
+    }
+}
+
+#navigation_bar {
+    color: $text;
+    background-color: $mantle;
+}
