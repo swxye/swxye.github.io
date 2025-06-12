@@ -1,3 +1,5 @@
+// THE BASIC DISPLAYS
+
 .flexbox_standard {
     display: flex;
 }
@@ -15,12 +17,23 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.space_filling_box {
-    width: 1fr;
+// THE BASIC CONTAINERS
+
+.standard_box {
+    width: fit-content;
     height: fit-content;
     margin: 10px;
     padding: 10px 20px;
 }
+
+.space_filling_box {
+    width: 1fr;
+    height: fit-content;
+    margin: 10px;
+    padding: 10px 20px; 
+}
+
+// THE IDS IF CLASSES AREN'T ENOUGH
 
 #navigation_bar {
     padding: 10px 20px;

@@ -1,3 +1,5 @@
+// COLOR VARIABLES
+
 $mauve: rgb(203, 166, 247);
 $red: rgb(243, 139, 168);
 $green: rgb(166, 227, 161);
@@ -7,6 +9,8 @@ $lavender: rgb(180, 190, 254);
 $text: rgb(205, 214, 244);
 $base: rgb(30, 30, 46);
 $mantle: rgb(24, 24, 37);
+
+// THE BASIC HTML ELEMENTS
 
 body {
     background-color: $base;
@@ -32,7 +36,9 @@ a {
     }
 }
 
-.space_filling_box {
+// THE BASIC CONTAINERS
+
+.standard_box, .space_filling_box {
     color: $text;
     background-color: $base;
     border: $lavender solid 2px;
@@ -44,6 +50,8 @@ a {
         border: transparent solid 2px;
     }
 }
+
+// THE IDS IF CLASSES AREN'T ENOUGH
 
 #navigation_bar {
     color: $text;

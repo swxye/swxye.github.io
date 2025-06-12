@@ -5,6 +5,14 @@
   padding: 0px;
 }
 
+ul {
+  list-style-type: none;
+}
+ul li::before {
+  content: "-";
+  padding-right: 1ch;
+}
+
 .flexbox_standard {
   display: flex;
 }
@@ -20,6 +28,13 @@
 .grid_standard {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.standard_box {
+  width: fit-content;
+  height: fit-content;
+  margin: 10px;
+  padding: 10px 20px;
 }
 
 .space_filling_box {
@@ -57,6 +72,18 @@ a:hover {
   color: rgb(166, 227, 161);
 }
 
+.standard_box {
+  color: rgb(205, 214, 244);
+  background-color: rgb(30, 30, 46);
+  border: rgb(180, 190, 254) solid 2px;
+  border-radius: 20px;
+}
+.standard_box:hover {
+  color: rgb(30, 30, 46);
+  background-color: rgb(205, 214, 244);
+  border: transparent solid 2px;
+}
+
 .space_filling_box {
   color: rgb(205, 214, 244);
   background-color: rgb(30, 30, 46);
@@ -74,4 +101,4 @@ a:hover {
   background-color: rgb(24, 24, 37);
 }
 
-/*# sourceMappingURL=stuff.css.map */
+/*# sourceMappingURL=style.css.map */
