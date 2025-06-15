@@ -38,7 +38,7 @@ a {
 
 // THE BASIC CONTAINERS
 
-.standard_box, .space_filling_box {
+.box_standard, .box_space_filling_flexbox, .box_space_filling_grid {
     color: $text;
     background-color: $base;
     border: $lavender solid 2px;
@@ -49,6 +49,13 @@ a {
         background-color: $text;
         border: transparent solid 2px;
     }
+}
+
+.box_borderless {
+    color: $text;
+    background-color: $base;
+    border: transparent solid 2px;
+    border-radius: 20px;
 }
 
 // THE IDS IF CLASSES AREN'T ENOUGH

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../../styling/css/style.css"/>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navigation_bar" class="flexbox_standard flexbox_space_between">
+        <div id="navigation_bar__block_left">
+            <h1>Swxye's Stuff</h1>
+        </div>
+
+        <div id="navigation_bar__block_right" class="flexbox_standard flexbox_gaps">
+            <h1><a href="../..">Home</a></h1>
+            <h1><a href="../stuff">Stuff</a></h1>
+        </div>
+    </div>
+
+    <div id="page_content">
+        <div id="page_content__info" class="box_borderless">
+            <p>
+                This is basically a random unicode string generator, when you want a string of hieroglyphs or whatever.
+                <br><br>
+                This was written in JavaScript.
+            </p>
+        </div>
+        <div id="page_content__generator" class="flexbox_standard">
+            <div id="page_content__generator__output" class="box_space_filling_flexbox">
+                STILL UNDER CONSTRUCTION
+            </div>
+            <div id="page_content__generator__parameters" class="box_standard">
+                <div id="page_content__generator__parameters__settings">
+                    <div id="page_content__generator__parameters__unicode_range">
+                        <h3>Unicode range:</h3>
+                        
+                        <div id="page_content__generator__parameters__unicode_range__input" class="flexbox_standard flexbox_gaps">
+                            <input
+                                id="page_content__generator__parameters__unicode_range__input__minimum"
+                                type="text"
+                                name="name"
+                                minlength="1"
+                                maxlength="6"
+                                size="10"
+                            />
+
+                            <label>-</label>
+
+                            <input
+                                id="page_content__generator__parameters__unicode_range__input__maximum"
+                                type="text"
+                                name="name"
+                                minlength="1"
+                                maxlength="6"
+                                size="10"
+                            />
+                        </div>
+                    </div>
+                    
+                    <div id="page_content__generator__parameters__string_length">
+
+                    </div>
+                </div>
+                
+                <button id="page_content__generator__parameters__button_generate">Generate</button>
+
+                <script type="module" src="code/generator_api.js"></script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

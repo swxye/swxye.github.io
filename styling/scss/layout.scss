@@ -1,7 +1,17 @@
+// MIXINS
+
+@mixin box($width, $height) {
+    width: $width;
+    height: $height;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
 // THE BASIC DISPLAYS
 
 .flexbox_standard {
     display: flex;
+    box-sizing: border-box;
 }
 
 .flexbox_space_between {
@@ -19,18 +29,28 @@
 
 // THE BASIC CONTAINERS
 
-.standard_box {
-    width: fit-content;
-    height: fit-content;
-    margin: 10px;
-    padding: 10px 20px;
+.box_standard {
+    @include box(fit-content, fit-content);
+    min-width: 0;
+    flex-shrink: 0;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-.space_filling_box {
-    width: 1fr;
-    height: fit-content;
-    margin: 10px;
-    padding: 10px 20px; 
+.box_borderless {
+    @include box(fit-content, fit-content);
+    flex-shrink: 0;
+    padding: 0px;
+}
+
+.box_space_filling_flexbox {
+    @include box(auto, fit-content);
+    flex-grow: 1;
+}
+
+.box_space_filling_grid {
+    @include box(1fr, fit-content);
 }
 
 // THE IDS IF CLASSES AREN'T ENOUGH
@@ -39,6 +59,13 @@
     padding: 10px 20px;
 }
 
-#page_content-stuff {
+#page_content__stuff {
     padding: 0px 100px;
+}
+
+#page_content__generator__output {
+    min-width: 0;
+    flex: 1 1 auto;
+    white-space: normal;
+    word-break: break-word;
 }

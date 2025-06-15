@@ -15,6 +15,7 @@ ul li::before {
 
 .flexbox_standard {
   display: flex;
+  box-sizing: border-box;
 }
 
 .flexbox_space_between {
@@ -30,14 +31,36 @@ ul li::before {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.standard_box {
+.box_standard {
   width: fit-content;
   height: fit-content;
   margin: 10px;
   padding: 10px 20px;
+  min-width: 0;
+  flex-shrink: 0;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-.space_filling_box {
+.box_borderless {
+  width: fit-content;
+  height: fit-content;
+  margin: 10px;
+  padding: 10px 20px;
+  flex-shrink: 0;
+  padding: 0px;
+}
+
+.box_space_filling_flexbox {
+  width: auto;
+  height: fit-content;
+  margin: 10px;
+  padding: 10px 20px;
+  flex-grow: 1;
+}
+
+.box_space_filling_grid {
   width: 1fr;
   height: fit-content;
   margin: 10px;
@@ -48,8 +71,15 @@ ul li::before {
   padding: 10px 20px;
 }
 
-#page_content-stuff {
+#page_content__stuff {
   padding: 0px 100px;
+}
+
+#page_content__generator__output {
+  min-width: 0;
+  flex: 1 1 auto;
+  white-space: normal;
+  word-break: break-word;
 }
 
 body {
@@ -72,28 +102,23 @@ a:hover {
   color: rgb(166, 227, 161);
 }
 
-.standard_box {
+.box_standard, .box_space_filling_flexbox, .box_space_filling_grid {
   color: rgb(205, 214, 244);
   background-color: rgb(30, 30, 46);
   border: rgb(180, 190, 254) solid 2px;
   border-radius: 20px;
 }
-.standard_box:hover {
+.box_standard:hover, .box_space_filling_flexbox:hover, .box_space_filling_grid:hover {
   color: rgb(30, 30, 46);
   background-color: rgb(205, 214, 244);
   border: transparent solid 2px;
 }
 
-.space_filling_box {
+.box_borderless {
   color: rgb(205, 214, 244);
   background-color: rgb(30, 30, 46);
-  border: rgb(180, 190, 254) solid 2px;
-  border-radius: 20px;
-}
-.space_filling_box:hover {
-  color: rgb(30, 30, 46);
-  background-color: rgb(205, 214, 244);
   border: transparent solid 2px;
+  border-radius: 20px;
 }
 
 #navigation_bar {
