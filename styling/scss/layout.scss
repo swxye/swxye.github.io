@@ -29,7 +29,7 @@
 
 // THE BASIC CONTAINERS
 
-.box_standard {
+.box_standard, .box_standard_no_hover {
     @include box(fit-content, fit-content);
     min-width: 0;
     flex-shrink: 0;
@@ -44,13 +44,19 @@
     padding: 0px;
 }
 
-.box_space_filling_flexbox {
+.box_space_filling_flexbox, .box_space_filling_flexbox_no_hover {
     @include box(auto, fit-content);
     flex-grow: 1;
 }
 
-.box_space_filling_grid {
+.box_space_filling_grid, .box_space_filling_grid_no_hover {
     @include box(1fr, fit-content);
+}
+
+.box_input, .box_button {
+    @include box(fit-content, fit-content);
+    margin: 10px 0px;
+    padding: 5px 10px;
 }
 
 // THE IDS IF CLASSES AREN'T ENOUGH

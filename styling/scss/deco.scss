@@ -7,10 +7,22 @@ $blue: rgb(137, 180, 250);
 $lavender: rgb(180, 190, 254);
 
 $text: rgb(205, 214, 244);
+$overlay1: rgb(127, 132, 156);
 $base: rgb(30, 30, 46);
 $mantle: rgb(24, 24, 37);
 
 // THE BASIC HTML ELEMENTS
+
+*:focus {
+    color: $base !important;
+    background-color: $text !important;
+    border: transparent solid 2px !important;
+    outline: none !important;
+}
+
+*::placeholder {
+    color: $overlay1;
+}
 
 body {
     background-color: $base;
@@ -49,6 +61,27 @@ a {
         background-color: $text;
         border: transparent solid 2px;
     }
+}
+
+.box_standard_no_hover, .box_space_filling_flexbox_no_hover, .box_space_filling_grid_no_hover {
+    color: $text;
+    background-color: $base;
+    border: $lavender solid 2px;
+    border-radius: 20px;
+}
+
+.box_input {
+    color: $text;
+    background-color: $base;
+    border: $lavender solid 2px;
+    border-radius: 10px;
+}
+
+.box_button {
+    color: $text;
+    background-color: $base;
+    border: $lavender solid 2px;
+    border-radius: 100px;
 }
 
 .box_borderless {
