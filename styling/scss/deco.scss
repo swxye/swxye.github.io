@@ -11,12 +11,25 @@ $overlay1: rgb(127, 132, 156);
 $base: rgb(30, 30, 46);
 $mantle: rgb(24, 24, 37);
 
+// MIXINS
+
+@mixin box($color, $background-color, $border, $border-radius) {
+    color: $color;
+    background-color: $background-color;
+    border: $border;
+    border-radius: $border-radius;
+}
+
 // THE BASIC HTML ELEMENTS
+
+* {
+    border-radius: 0px;
+}
 
 *:focus {
     color: $base !important;
     background-color: $text !important;
-    border: transparent solid 2px !important;
+    border-color: transparent !important;
     outline: none !important;
 }
 
@@ -50,45 +63,36 @@ a {
 
 // THE BASIC CONTAINERS
 
+.rounding_minor {
+    border-radius: 5px;
+}
+
 .box_standard, .box_space_filling_flexbox, .box_space_filling_grid {
-    color: $text;
-    background-color: $base;
-    border: $lavender solid 2px;
-    border-radius: 20px;
+    @include box($text, $base, $lavender solid 2px, 20px);
 
     &:hover {
-        color: $base;
-        background-color: $text;
-        border: transparent solid 2px;
+        @include box($base, $text, transparent solid 2px, 20px);
     }
 }
 
 .box_standard_no_hover, .box_space_filling_flexbox_no_hover, .box_space_filling_grid_no_hover {
-    color: $text;
-    background-color: $base;
-    border: $lavender solid 2px;
-    border-radius: 20px;
-}
-
-.box_input {
-    color: $text;
-    background-color: $base;
-    border: $lavender solid 2px;
-    border-radius: 10px;
-}
-
-.box_button {
-    color: $text;
-    background-color: $base;
-    border: $lavender solid 2px;
-    border-radius: 100px;
+    @include box($text, $base, $lavender solid 2px, 20px);
 }
 
 .box_borderless {
-    color: $text;
-    background-color: $base;
-    border: transparent solid 2px;
-    border-radius: 20px;
+    @include box($text, $base, transparent solid 2px, 20px);
+}
+
+.box_input {
+    @include box($text, $base, $lavender solid 2px, 10px);
+}
+
+.box_button {
+    @include box($text, $base, $lavender solid 2px, 100px);
+
+    &:hover {
+        @include box($base, $text, transparent solid 2px, 100px);
+    }
 }
 
 // THE IDS IF CLASSES AREN'T ENOUGH

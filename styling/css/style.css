@@ -92,10 +92,14 @@ ul li::before {
   word-break: break-word;
 }
 
+* {
+  border-radius: 0px;
+}
+
 *:focus {
   color: rgb(30, 30, 46) !important;
   background-color: rgb(205, 214, 244) !important;
-  border: transparent solid 2px !important;
+  border-color: transparent !important;
   outline: none !important;
 }
 
@@ -123,6 +127,10 @@ a:hover {
   color: rgb(166, 227, 161);
 }
 
+.rounding_minor {
+  border-radius: 5px;
+}
+
 .box_standard, .box_space_filling_flexbox, .box_space_filling_grid {
   color: rgb(205, 214, 244);
   background-color: rgb(30, 30, 46);
@@ -133,12 +141,20 @@ a:hover {
   color: rgb(30, 30, 46);
   background-color: rgb(205, 214, 244);
   border: transparent solid 2px;
+  border-radius: 20px;
 }
 
 .box_standard_no_hover, .box_space_filling_flexbox_no_hover, .box_space_filling_grid_no_hover {
   color: rgb(205, 214, 244);
   background-color: rgb(30, 30, 46);
   border: rgb(180, 190, 254) solid 2px;
+  border-radius: 20px;
+}
+
+.box_borderless {
+  color: rgb(205, 214, 244);
+  background-color: rgb(30, 30, 46);
+  border: transparent solid 2px;
   border-radius: 20px;
 }
 
@@ -155,12 +171,11 @@ a:hover {
   border: rgb(180, 190, 254) solid 2px;
   border-radius: 100px;
 }
-
-.box_borderless {
-  color: rgb(205, 214, 244);
-  background-color: rgb(30, 30, 46);
+.box_button:hover {
+  color: rgb(30, 30, 46);
+  background-color: rgb(205, 214, 244);
   border: transparent solid 2px;
-  border-radius: 20px;
+  border-radius: 100px;
 }
 
 #navigation_bar {
