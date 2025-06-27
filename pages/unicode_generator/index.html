@@ -7,6 +7,7 @@
             .then(data => document.head.innerHTML += data);
     </script>
 
+    <link rel="stylesheet" href="/assets/styling/css/style.css"/>
     <title>Selestia's unicode generator</title>
 </head>
 <body>
@@ -37,9 +38,6 @@
             </p>
         </div>
         <div id="page_content__generator" class="flexbox_standard">
-            <div id="page_content__generator__output" class="box_space_filling_flexbox_no_hover">
-                Hi there :3
-            </div>
             <div id="page_content__generator__parameters" class="box_standard_no_hover">
                 <div id="page_content__generator__parameters__settings">
                     <div id="page_content__generator__parameters__unicode_range">
@@ -90,6 +88,10 @@
                 <button id="page_content__generator__parameters__button_generate" class="box_button">Generate</button>
 
                 <script type="module" src="/assets/js/unicode_generator/generator_html_buffer.js"></script>
+            </div>
+
+            <div id="page_content__generator__output" class="box_space_filling_flexbox_no_hover">
+                Hi there :3
             </div>
         </div>
     </div>

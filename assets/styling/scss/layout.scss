@@ -9,7 +9,7 @@
 
 // THE BASIC DISPLAYS
 
-.flexbox_standard {
+.flexbox_standard, .flexbox_no_break {
     display: flex;
     box-sizing: border-box;
 }
@@ -61,8 +61,8 @@
 
 // MEDIA BREAKPOINTS FOR MOBILE & SMALL SCREENS
 
-@media (max-width: 1000px) {
-    #page_content, #page_content__block_top_right {
+@media (max-width: 950px) {
+    .flexbox_standard {
         display: flex !important;
         flex-direction: column !important;
         box-sizing: border-box !important;

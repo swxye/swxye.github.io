@@ -7,10 +7,11 @@
             .then(data => document.head.innerHTML += data);
     </script>
 
+    <link rel="stylesheet" href="/assets/styling/css/style.css"/>
     <title>Selestia's homepage</title>
 </head>
 <body>
-    <div id="navigation_bar" class="flexbox_standard flexbox_space_between"></div>
+    <div id="navigation_bar" class="flexbox_standard flexbox_gaps flexbox_space_between"></div>
 
     <script>
         fetch('/components/navbar.html')
@@ -32,7 +33,7 @@
         <div id="page_content__block_top_left">
             <div id="page_content__block_top_left__info" class="box_standard">
                 <h2>Info</h2>
-                <div id="page_content__block_top_left__info__contents" class="flexbox_standard flexbox_gaps">
+                <div id="page_content__block_top_left__info__contents" class="flexbox_no_break flexbox_gaps">
                     <div id="page_content__block_top_left__info__contents__column_left">
                         <h3>Interests</h3>
                         <ul>
@@ -77,7 +78,7 @@
 
             <div id="page_content__block_top_right__names" class="box_standard">
                 <h2>(Nick)names</h2>
-                <div id="page_content__block_top_right__names__contents" class="flexbox_standard flexbox_gaps">
+                <div id="page_content__block_top_right__names__contents" class="flexbox_no_break flexbox_gaps">
                     <div id="page_content__block_top_right__names__contents__column_left">
                         <ul>
                             <li>Swxye</li>
