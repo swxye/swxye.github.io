@@ -11,7 +11,7 @@
     <title>Selestia's unicode generator</title>
 </head>
 <body>
-    <div id="navigation_bar" class="flexbox_standard flexbox_space_between"></div>
+    <div id="navigation_bar" class="flexbox_standard flexbox_gaps flexbox_space_between"></div>
 
     <script>
         fetch('/components/navbar.html')
@@ -43,16 +43,16 @@
                     <div id="page_content__generator__parameters__unicode_range">
                         <h3>Unicode range:</h3>
                         
-                        <div id="page_content__generator__parameters__unicode_range__input" class="flexbox_standard flexbox_gaps">
+                        <div id="page_content__generator__parameters__unicode_range__input" class="flexbox_no_break flexbox_gaps">
                             <input
                                 id="page_content__generator__parameters__unicode_range__input__minimum"
                                 class="box_input"
                                 type="text"
                                 name="name"
-                                placeholder="Minimum bound (hex)"
+                                placeholder="Minimum (hex)"
                                 minlength="1"
                                 maxlength="6"
-                                size="19"
+                                size="13"
                             />
 
                             <input
@@ -60,10 +60,10 @@
                                 class="box_input"
                                 type="text"
                                 name="name"
-                                placeholder="Maximum bound (hex)"
+                                placeholder="Maximum (hex)"
                                 minlength="1"
                                 maxlength="6"
-                                size="19"
+                                size="13"
                             />
                         </div>
 
@@ -73,10 +73,10 @@
                             class="box_input"
                             type="text"
                             name="name"
-                            placeholder="String length (dec)"
+                            placeholder="Length (dec)"
                             minlength="1"
                             maxlength="6"
-                            size="19"
+                            size="12"
                         />
                     </div>
                     

@@ -8,9 +8,16 @@
 
 ul {
     list-style-type: none;
+    padding-left: 0;
 
-    & li::before {
-        content: "-";
-        padding-right: 1ch;
+    li {
+        display: flex;
+        align-items: flex-start;
+
+        &::before {
+            content: "-";
+            padding-right: 1ch;
+            flex-shrink: 0;
+        }
     }
 }

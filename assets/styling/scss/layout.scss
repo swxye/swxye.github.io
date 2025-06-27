@@ -71,7 +71,27 @@
     .grid_standard {
         display: grid !important;
         grid-template-columns: 1fr !important;
-    }   
+    }
+
+    .box_standard, .box_standard_no_hover {
+        width: auto !important;
+    }
+
+    #page_content__stuff {
+        padding: 0px 40px !important;
+    }
+}
+
+@media (max-width: 404px) {
+    .flexbox_no_break {
+        display: flex !important;
+        flex-direction: column !important;
+        box-sizing: border-box !important;
+    }
+
+    #page_content__stuff {
+        padding: 0px 20px !important;
+    }
 }
 
 // THE IDS IF CLASSES AREN'T ENOUGH
