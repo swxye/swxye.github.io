@@ -24,17 +24,22 @@ $mantle: rgb(24, 24, 37);
 
 * {
     border-radius: 0px;
-}
 
-*:focus {
-    color: $base !important;
-    background-color: $text !important;
-    border-color: transparent !important;
-    outline: none !important;
-}
+    &:focus {
+        color: $base !important;
+        background-color: $text !important;
+        border-color: transparent !important;
+        outline: none !important;
+    }
 
-*::placeholder {
-    color: $overlay1;
+    &::selection {
+        color: $base;
+        background-color: $text;
+    }
+
+    &::placeholder {
+        color: $overlay1;
+    }
 }
 
 body {
@@ -72,6 +77,11 @@ a {
 
     &:hover {
         @include box($base, $text, transparent solid 2px, 20px);
+        
+        *::selection {
+            color: $text;
+            background-color: $base;
+        }
     }
 }
 
@@ -87,12 +97,16 @@ a {
     @include box($text, $base, $lavender solid 2px, 10px);
 }
 
-.box_button {
+.box_button,.box_button_space_filling_grid {
     @include box($text, $base, $lavender solid 2px, 100px);
 
     &:hover {
         @include box($base, $text, transparent solid 2px, 100px);
     }
+}
+
+.box_button_space_filling_grid_no_hover {
+    @include box($text, $base, $lavender solid 2px, 100px); 
 }
 
 // THE IDS IF CLASSES AREN'T ENOUGH

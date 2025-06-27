@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="../../styling/css/style.css"/>
-<link rel="icon" href="../../assets/favicon.svg" type="image/svg">
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swxye's homepage</title>
+    <script>
+        fetch('/components/default_head.html')
+            .then(res => res.text())
+            .then(data => document.head.innerHTML += data);
+    </script>
+
+    <title>Selestia's homepage</title>
 </head>
 <body>
-    <div id="navigation_bar" class="flexbox_standard flexbox_space_between">
-        <div id="navigation_bar__block_left">
-            <h1>Swxye's Homepage</h1>
-        </div>
+    <div id="navigation_bar" class="flexbox_standard flexbox_space_between"></div>
 
-        <div id="navigation_bar__block_right" class="flexbox_standard flexbox_gaps">
-            <h1><a class="rounding_minor" href=".">Home</a></h1>
-            <h1><a class="rounding_minor" href="../stuff/">Stuff</a></h1>
-        </div>
-    </div>
+    <script>
+        fetch('/components/navbar.html')
+        .then(res => res.text())
+        .then(data => {
+            const nav = document.getElementById('navigation_bar');
+            nav.innerHTML = data;
+
+            setTimeout(() => {
+                const left_title = nav.querySelector('#navigation_bar__block_left h1');
+                if (left_title) {
+                    left_title.textContent = "Selestia's Homepage";
+                }
+            }, 0);
+        });
+    </script>
 
     <div id="page_content" class="flexbox_standard flexbox_space_between">
         <div id="page_content__block_top_left">
@@ -45,6 +54,9 @@
                         <h3>Personal info</h3>
                         <ul>
                             <li>13 years old</li>
+                            <br>
+                            <li>Autistic (ASD I)</li>
+                            <li>Bipolar II</li>
                             <br>
                             <li>Aroace</li>
                             <li>Genderfluid</li>

@@ -1,5 +1,5 @@
 // @license Unlicense
-// @source https://swxye.github.io/pages/unicode_generator/code/generator.js
+// @source https://swxye.github.io/assets/js/unicode_generator/generator.js
 
 function get_random_hex(min, max) {
     min = Math.ceil(min);

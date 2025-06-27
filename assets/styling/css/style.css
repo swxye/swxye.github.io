@@ -1,6 +1,42 @@
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("/assets/fonts/JetBrainsMono-Light.woff2") format("woff2");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("/assets/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("/assets/fonts/JetBrainsMono-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("/assets/fonts/JetBrainsMono-LightItalic.woff2") format("woff2");
+  font-weight: lighter;
+  font-style: italic;
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("/assets/fonts/JetBrainsMono-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("/assets/fonts/JetBrainsMono-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
 * {
   border-radius: 5px;
-  font-family: "JetBrains Mono";
+  font-family: "JetBrainsMono";
   line-height: 1.5;
   margin: 0px;
   padding: 0px;
@@ -61,7 +97,7 @@ ul li::before {
   flex-grow: 1;
 }
 
-.box_space_filling_grid, .box_space_filling_grid_no_hover {
+.box_space_filling_grid, .box_space_filling_grid_no_hover, .box_button_space_filling_grid, .box_button_space_filling_grid_no_hover {
   width: 1fr;
   height: fit-content;
   margin: 10px;
@@ -77,6 +113,17 @@ ul li::before {
   padding: 5px 10px;
 }
 
+@media (max-width: 1000px) {
+  #page_content, #page_content__block_top_right {
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+  }
+  .grid_standard {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+}
 #navigation_bar {
   padding: 10px 20px;
 }
@@ -95,14 +142,16 @@ ul li::before {
 * {
   border-radius: 0px;
 }
-
 *:focus {
   color: rgb(30, 30, 46) !important;
   background-color: rgb(205, 214, 244) !important;
   border-color: transparent !important;
   outline: none !important;
 }
-
+*::selection {
+  color: rgb(30, 30, 46);
+  background-color: rgb(205, 214, 244);
+}
 *::placeholder {
   color: rgb(127, 132, 156);
 }
@@ -143,6 +192,10 @@ a:hover {
   border: transparent solid 2px;
   border-radius: 20px;
 }
+.box_standard:hover *::selection, .box_space_filling_flexbox:hover *::selection, .box_space_filling_grid:hover *::selection {
+  color: rgb(205, 214, 244);
+  background-color: rgb(30, 30, 46);
+}
 
 .box_standard_no_hover, .box_space_filling_flexbox_no_hover, .box_space_filling_grid_no_hover {
   color: rgb(205, 214, 244);
@@ -165,16 +218,23 @@ a:hover {
   border-radius: 10px;
 }
 
-.box_button {
+.box_button, .box_button_space_filling_grid {
   color: rgb(205, 214, 244);
   background-color: rgb(30, 30, 46);
   border: rgb(180, 190, 254) solid 2px;
   border-radius: 100px;
 }
-.box_button:hover {
+.box_button:hover, .box_button_space_filling_grid:hover {
   color: rgb(30, 30, 46);
   background-color: rgb(205, 214, 244);
   border: transparent solid 2px;
+  border-radius: 100px;
+}
+
+.box_button_space_filling_grid_no_hover {
+  color: rgb(205, 214, 244);
+  background-color: rgb(30, 30, 46);
+  border: rgb(180, 190, 254) solid 2px;
   border-radius: 100px;
 }
 

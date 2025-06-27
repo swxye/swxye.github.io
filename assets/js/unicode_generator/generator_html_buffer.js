@@ -1,5 +1,5 @@
 // @license Unlicense
-// @source https://swxye.github.io/pages/unicode_generator/code/generator_html_buffer.js
+// @source https://swxye.github.io/assets/js/unicode_generator/generator_html_buffer.js
 
 import { generate_string } from './generator.js';
 
